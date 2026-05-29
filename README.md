@@ -1,9 +1,7 @@
 # ToothEater-HW-THT
 
-<b><i> --- UNDER CONSTRUCTION --- </b></i>
-
-This repository contains the hardware designs of the Honda Blackbird ECU Tooth Eater Module - Through hole version (currently at v1.0). This through hole version is intended for the DIY'er for easier construction.<br /><br />
-This hardware is designed to work with the latest firmware version (v1.1) contained in the firmware respository.<br />I.e. <i>ToothEater_v1.1.hex</i><br />
+This repository contains the hardware design of the Honda Blackbird v1.0 Tooth Eater Module - (Through hole version). This through hole version is intended for the DIY'er for easier construction. This PCB is a simple 2 layer design, measuring 44mm x 44mm for insertion into the Hammond 1551R case.<br /><br />
+This hardware is designed to work with the latest firmware version (v1.1) contained in the firmware respository. I.e. <i>'ToothEater_v1.1.hex'</i><br />
 <br />
 Shown below are blank boards as received by PCBWay. This is a small unit slightly larger than a matchbox, shown in the 2" x 2" case.
 
@@ -295,12 +293,83 @@ The outputs are:
 
 </table>
 
-<br /><br /><br />
-# Design
-<i>Coming soon</i>
-<br /><br /><br />
+<br /><br />
+# Hardware Design
 
-After cloning the repository and opening the project for the first time, you may need to set up the symbol library path.
+<table border="1">
+
+<tr> 
+<td width="20%">
+<strong><u>Current Revision</u></strong>
+</td>
+<td width="60%">
+<strong><u>Date</u></strong>
+</td>
+<td width="20%">
+<strong><u>Author</u></strong>
+</td>
+</tr>
+
+<tr>
+<td width="20%">
+v1.0
+</td>
+<td width="60%">
+June 2026
+</td>
+<td width="20%">
+Alex Kiaos
+</td>
+</tr>
+
+</table>
+
+<br />
+This project has been designed in Kicad 6.0.11 under linux and is licenced under the CERN Open Hardware Licence Version 2 - Strongly Reciprocal (CERN-OHL-S).<br /><br />
+
+The directory structure of this project is as follows:
+
+<p id=directories>
+<img src="./images/.directoryStructure.png" width="302">
+</p>
+
+
+
+<table border="1">
+
+<tr> 
+<td width="20%">
+<strong><u>Directory</u></strong>
+</td>
+<td width="80%">
+<strong><u>Description</u></strong>
+</td>
+</tr>
+
+<tr>
+<td width="20%">
+BOM
+</td>
+<td width="80%">
+Bill of materials
+</td>
+</tr>
+
+<tr>
+<td width="20%">
+kicad
+</td>
+<td width="80%">
+The main project file is 'ToothEater.kicad_pro' found under</br>'/pcb/kicad/ToothEater'.</br></br>
+Gerber files can be found as a group of 9 individual files under the 'gerbers' directory or as a single zipped file under the 'gerber_zipped' directory for uploading to a PCB house for manufacture.</br></br>
+The 'CustomLibrary' directory contains the custom symbols and footprints used in the project.
+</td>
+</tr>
+
+</table>
+
+</br>
+After cloning the repository and opening the project for the first time, you may need to set up the symbol library path.<br />
 
 To setup the symbols library, in the menu:<br>
 <pre><i>Preferences -> Manage Symbol Libraries</i><br>
