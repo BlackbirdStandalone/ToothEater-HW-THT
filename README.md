@@ -87,13 +87,23 @@ A zoomed picture of the board is shown below. The full bill of materials can be 
 </tr>
 
 <tr>
-<td align="center" valign="center">R3,R5,R7,R9,R11</td>
-<td align="center" valign="center">1K</td>
+<td align="center" valign="center">R3,R5</td>
+<td align="center" valign="center">10K</td>
 </tr>
 
 <tr>
 <td align="center" valign="center">R4,R6</td>
-<td align="center" valign="center">10K</td>
+<td align="center" valign="center">1K</td>
+</tr>
+
+<tr>
+<td align="center" valign="center">R7,R9</td>
+<td align="center" valign="center">47K</td>
+</tr>
+
+<tr>
+<td align="center" valign="center">R11</td>
+<td align="center" valign="center">4K7</td>
 </tr>
 
 <tr>
@@ -107,8 +117,13 @@ A zoomed picture of the board is shown below. The full bill of materials can be 
 </tr>
 
 <tr>
-<td align="center" valign="center">D3,D4,D5,D6</td>
-<td align="center" valign="center">Led (standard 3mm spacing)</td>
+<td align="center" valign="center">D3</td>
+<td align="center" valign="center">Power Led - Red (standard 3mm spacing)</td>
+</tr>
+
+<tr>
+<td align="center" valign="center">D4,D5</td>
+<td align="center" valign="center">Crank and cam Leds - Yellow (standard 3mm spacing)</td>
 </tr>
 
 <tr>
@@ -285,7 +300,8 @@ The inputs to this module are:
 The outputs are:
 <ul>
   <li>CAM TTL (0-5v level single cam pulse - fed into your downstream ECU)</li>
-  <li>CRANK TTL (0-5v level single cam pulse - fed into your downstream ECU)</li>
+  <li>CRANK TTL (0-5v level single crank pulse - fed into your downstream ECU)</li>
+  <li>TACHO (0-12v level square wave - fed to your dash via pin A19 on main wiring harness)</li>
 </ul>
 <p> Note: The crank signal is the 12 pulses per crank rotation. The cam signal is post-processed by the tooth eater, therefore 1 pulse per engine cycle (two crank revolutions).</p>
 </td>
@@ -312,10 +328,10 @@ The outputs are:
 
 <tr>
 <td width="20%">
-v1.0
+v1.1
 </td>
 <td width="60%">
-June 2026
+July 2026
 </td>
 <td width="20%">
 Alex Kiaos
