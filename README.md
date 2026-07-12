@@ -1,7 +1,7 @@
 # ToothEater-HW-THT
 
-This repository contains the hardware design of the Honda Blackbird v1.0 Tooth Eater Module - (Through hole version). This through hole version is intended for the DIY'er for easier construction. This PCB is a simple 2 layer design, measuring 44mm x 44mm for insertion into the Hammond 1551R case.<br /><br />
-This hardware is designed to work with the latest firmware version (v1.1) contained in the firmware respository. I.e. <i>'ToothEater_v1.1.hex'</i><br />
+This repository contains the hardware design of the Honda Blackbird v1.1 Tooth Eater Module - (Through hole version). This through hole version is intended for the DIY'er for easier construction. This PCB is a simple 2 layer design, measuring 44mm x 44mm for insertion into the Hammond 1551R case.<br /><br />
+This hardware is designed to work with the latest firmware version (v1.x) contained in the firmware respository. I.e. <i>'ToothEater_v1.2.hex'.</i><br />
 <br />
 Shown below are blank boards as received by PCBWay. This is a small unit slightly larger than a matchbox, shown in the 2" x 2" case.
 
@@ -33,7 +33,7 @@ Shown below are blank boards as received by PCBWay. This is a small unit slightl
 
 <br />
 
-A zoomed picture of the board is shown below. The full bill of materials can be found in the 'BOM' directory, however the table below will quickly identify most components.
+A zoomed picture of the board is shown below. The full bill of materials can be found in the 'BOM' directory, however the table below will quickly identify the components. This table reflects the BOM for PCB v1.1.
 
 <table border="3">
 <tr>
@@ -143,7 +143,7 @@ A zoomed picture of the board is shown below. The full bill of materials can be 
 </img>
 
 <br /><br />
-The board is shown below with the components assembled. It is up to you whether you install a 8-pin DIP socket for the microcontroller. I pre-programmed mine and just soldered it in. Also, the 8-pin DIP socket for the VR module is also not ideal, but will work just fine. It is better to use a two 1x4 pin female headers of appropriate height.
+The board is shown below with the components assembled.
 <img 
     style="display: block; 
            margin-left: auto;
@@ -155,12 +155,61 @@ The board is shown below with the components assembled. It is up to you whether 
 <br />
 
 
+
+<table border="1">
+
+The following illustrates different views of the v1.1 assembled board (without the VR mini-board installed).<br />
+
+<tr>
+<td align="center" valign="center">
+<img 
+    style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 100%;"
+    src="images/3dBoard_NoVr_1.jpg#center">
+</img>
+</td>
+<td>
+<img 
+    style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 100%;"
+    src="images/3dBoard_NoVr_2.jpg#center">
+</img>
+</td>
+</tr>
+
+<tr>
+<td align="center" valign="center">
+<img 
+    style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 100%;"
+    src="images/3dBoard_NoVr_3.jpg#center">
+</img>
+</td>
+<td>
+<img 
+    style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 100%;"
+    src="images/3dBoard_NoVr_4.jpg#center">
+</img>
+</td>
+</tr>
+
+</table>
+
+
 <table border="1">
 <tr>
 
 <br /><br />
-On the left: The assembled board, connectors installed as well as the VR plug-in module.<br />
-On the right: The case (Hammond 1551R).
+The board is shown below with two mini wiring harnesses connected to it, along with the speeduino compatible VR plug in mini board.
 
 <td align="center" valign="center">
 <img 
@@ -168,37 +217,42 @@ On the right: The case (Hammond 1551R).
            margin-left: auto;
            margin-right: auto;
            width: 100%;"
-    src="images/Board_1.jpg#center">
+    src="images/BoardWithWiresAndVR.jpg#center">
 </img>
 </td>
 
-<td>
-<img 
-    style="display: block; 
-           margin-left: auto;
-           margin-right: auto;
-           width: 100%;"
-    src="images/Case_Hammond_1551R.jpg#center">
-</img>
-</td>
+
 
 </tr>
 </table>
 
 
 <br /><br />
-Looking through the board, it can be seen that the pins on the VR mini-board don't bottom out. This doesn't appear ideal, but is fine in practice. With the VR board pressed down until it bottoms out, all the components on the tooth eater board are cleared of the VR board.
+Once the VR board is inserted into the tooth eater module, it may sit to tall such that it will not allow the lid to close on the case. This is due to the height of the two female 4x1 headers (8.5mm height) that is sits within. To remedy this, the plastic stand-offs may be pryed off with a screwdriver or similar. This will allow the VR module to sink lower into the tooth eater board once it is inserted.
 
 <img 
     style="display: block; 
            margin-left: auto;
            margin-right: auto;
            width: 100%;"
-    src="images/VR_PinHeight.jpg#center">
+    src="images/RemovingPlasticStandoff.jpg#center">
 </img>
 
+<br />
+Afterwards it will sit as follows. The overall height will now allow the package to fit within the case.
+
+<img 
+    style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 100%;"
+    src="images/TallFemaleHeader.jpg#center">
+</img>
+
+
 <br /><br />
-When assembled, the BD681 transistor sits slightly proud of the case top (~2mm). This can be fixed by slightly cutting into the lid in that area. 
+When assembled, the BD681 transistor sits slightly proud of the case top (~2mm). This can be fixed by bending it to the left as shown.
+
 <img 
     style="display: block; 
            margin-left: auto;
@@ -212,8 +266,9 @@ When assembled, the BD681 transistor sits slightly proud of the case top (~2mm).
            margin-left: auto;
            margin-right: auto;
            width: 100%;"
-    src="images/LidModification.jpg#center">
+    src="images/BendPowerTransistor.jpg#center">
 </img>
+
 
 <br /><br />
 The connectors require a section to be cut out of the case.
@@ -234,19 +289,13 @@ The connectors require a section to be cut out of the case.
 
 <br /><br />
 The board is fitted to the case and relative size is shown.
+
 <img 
     style="display: block; 
            margin-left: auto;
            margin-right: auto;
            width: 100%;"
-    src="images/BoardInCase-SideView.jpg#center">
-</img>
-<img 
-    style="display: block; 
-           margin-left: auto;
-           margin-right: auto;
-           width: 100%;"
-    src="images/BoardInCase-TopView.jpg#center">
+    src="images/CompletedCase.jpg#center">
 </img>
 <img 
     style="display: block; 
