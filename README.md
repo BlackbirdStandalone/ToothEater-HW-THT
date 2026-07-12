@@ -348,17 +348,59 @@ The inputs to this module are:
 <td>
 The outputs are:
 <ul>
-  <li>CAM TTL (0-5v level single cam pulse - fed into your downstream ECU)</li>
-  <li>CRANK TTL (0-5v level single crank pulse - fed into your downstream ECU)</li>
+  <li>CAM TTL (0-4.1v level single cam pulse - fed into your downstream ECU)</li>
+  <li>CRANK TTL (0-4.1v level single crank pulse - fed into your downstream ECU)</li>
   <li>TACHO (0-12v level square wave - fed to your dash via pin A19 on main wiring harness)</li>
 </ul>
-<p> Note: The crank signal is the 12 pulses per crank rotation. The cam signal is post-processed by the tooth eater, therefore 1 pulse per engine cycle (two crank revolutions).</p>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>Notes:<br />
+1. The crank signal is the 12 pulses per crank rotation. The cam signal is post-processed by the tooth eater, therefore 1 cam pulse per engine cycle (I.e. Two crank revolutions, 720 deg).<br /><br />
+2. The TTL output voltages are square wave outputs. The output voltage is slightly less than 5.0v and realistically closer to 4.1v. This should be fine in practice for ECUs expecting either 5.0v or 3.3v inputs (with internal built in protection on its inputs). In the future on the next board revision, I may add a jumper and a voltage divider to offer both use cases.<br />
+</p>
 </td>
 </tr>
 
 </table>
 
+<br />
+
+## Additional notes to observe
+
+1. If you are using the speeduino compatible VR conditioner mini board by 'OpenLogic EFI', then you will need to solder both VR1 and VR2 jumpers as shown in the image below. This is so your crank and cam signals can be processed by the tooth eater.
+2. There are also additional jumpers on the underside of the board. If you are using the VR board as mentioned above then leave these open circuit (o.c) as they are. These jumpers are of no practial use on the bike. <br />
+The purpose of these jumpers are mainly for bench testing the board with 0-5v TTL signals when testing with ardu-stim, so they should only be soldered when bench testing or when HALL effect sensors are being used instead of the VR.
+<table border="1">
+<tr>
+
+<td align="center" valign="center">
+<img 
+    style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 100%;"
+    src="images/VR_Soldering.png#center">
+</img>
+</td>
+
+<td>
+<img 
+    style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 100%;"
+    src="images/UndersideJumpers.png#center">
+</img>
+</td>
+
+</tr>
+</table>
+
 <br /><br />
+
 # Hardware Design
 
 <table border="1">
