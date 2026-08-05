@@ -486,4 +486,15 @@ Library Path: <b>${KIPRJMOD}/../CustomLibrary/symbols/ToothEater_symbols.kicad_s
 </pre>
 <br><br>
 
+# Relevant links
+
+### PCBWay
+To visit the PCBWay project and/or place an [order](https://www.pcbway.com/project/shareproject/Honda_CBR_Tooth_Eater_Module_Compatibility_module_for_the_CBR_1100XX_Super_Bla_bf3a4c0d.html).
+
+
+### Wiring Harness & Pinouts
+To see the ECU pin-out details, refer to the latest pdf file at: 
+[Wiring Harness Pinout diagram](https://github.com/BlackbirdStandalone/Documentation/tree/main/wiring).
+
+
 
